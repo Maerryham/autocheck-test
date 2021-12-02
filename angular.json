@@ -24,9 +24,31 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/style.css",
+              "src/assets/css/menu.css",
+              "src/assets/css/popuo-box.css",
+              "src/assets/css/fontawesome-all.css",
+              "src/assets/css/bootstrap.css",
+              "src/assets/css/flexslider.css"
+
+
+
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-2.2.3.min.js",
+              "src/assets/js/jquery.magnific-popup.js",
+              "src/assets/js/minicart.js",
+              "src/assets/js/imagezoom.js",
+              "src/assets/js/jquery.flexslider.js",
+              "src/assets/js/scroll.js",
+              "src/assets/js/SmoothScroll.min.js",
+              "src/assets/js/move-top.js",
+              "src/assets/js/easing.js",
+              "src/assets/js/scripts.js",
+              "src/assets/js/bootstrap.js"
+
+            ]
           },
           "configurations": {
             "production": {
