@@ -1,0 +1,23 @@
+<div class="text-center mt-5">
+<nav aria-label="Page navigation" class="text-center">
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link" aria-label="Previous" [class.disabled]="pagination?.currentPage == 0 ? true : null"
+         [routerLink]="'/product'" [queryParams]="{ pageNumber: pagination?.currentPage - 1}">
+        <span aria-hidden="true">« Prev</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item" *ngFor="let pageNumber of lastPage(), let i = index" [class.active]="(i == this.pagination?.currentPage)" [id]="'page'+i">
+      <a class="page-link" [routerLink]="[link]" [queryParams]="{ pageNumber: i}">{{i}}</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link"  aria-label="Next" [class.disabled]="pagination?.currentPage === lastPage()"
+         [routerLink]="'/product'" [queryParams]="{ pageNumber: pagination?.currentPage + 1}">
+        <span aria-hidden="true">Next »</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</div>

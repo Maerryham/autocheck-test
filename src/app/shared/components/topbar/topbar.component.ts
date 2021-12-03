@@ -9,6 +9,7 @@ import {CarsService} from '../../services/cars.service';
 export class TopbarComponent implements OnInit {
   carLists;
   carMakeLists;
+  splitedLists;
   constructor(private carService: CarsService) { }
 
   ngOnInit(): void {
@@ -19,8 +20,17 @@ export class TopbarComponent implements OnInit {
       response => {
         this.carMakeLists = response;
         this.carLists = this.carMakeLists.makeList;
-        // console.log(this.carLists);
+        this.splitedLists = this.divideArray(this.carLists);
       });
+  }
+  divideArray(yourArray): any {
+    // const yourArray = this.carLists;
+    const halfwayThrough = Math.floor(yourArray.length / 2);
+// or instead of floor you can use ceil depending on what side gets the extra data
+
+    const arrayFirstHalf = yourArray.slice(0, halfwayThrough);
+    const arraySecondHalf = yourArray.slice(halfwayThrough, yourArray.length);
+    return {first: arrayFirstHalf, second: arraySecondHalf};
   }
 
 }

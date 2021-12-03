@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CarsService} from '../shared/services/cars.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -11,11 +12,16 @@ export class ProductComponent implements OnInit {
   carResults;
   carBrandLists;
   carBrands;
+  pagination;
+  validCars;
 
-  constructor(private carService: CarsService) { }
+  constructor(private carService: CarsService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.getCars();
+    // this.getCars();
+    this.route.queryParams.subscribe(params => {
+      this.getCars(params.pageNumber || '1', params.pageSize || 10);
+    });
     this.getCarBrands();
   }
   getCarBrands(): void {
@@ -25,12 +31,48 @@ export class ProductComponent implements OnInit {
         this.carBrands = this.carBrandLists.makeList;
       });
   }
-  getCars(): void {
-    this.carService.getAllCars().subscribe(
+  getCars(pageNumber, pageSize): void {
+    this.carService.getAllCars(pageNumber, pageSize).subscribe(
       response => {
         this.carResults = response;
         this.carLists = this.carResults.result;
-        console.log(this.carResults);
+        this.pagination = this.carResults.pagination;
+        console.log(this.carLists);
+        // this.validCars = this.onlyAvailableImages(this.carLists);
+        // console.log(this.validCars);
       });
+  }
+  public onlyAvailableImages(arrayOfCars): any {
+    return arrayOfCars.map(async (carThatExist, i) => {
+      // Check if the car image exist;
+      // if yes render
+
+      try {
+        const check = await this.carService.readFile(arrayOfCars.imageUrl);
+        if (check) {
+          carThatExist = arrayOfCars;
+          // console.log(carThatExist);
+        }
+      }catch (error) {
+        // error from the rejected promise should get caught here
+        console.log(error);
+      }
+      return carThatExist;
+    });
+  }
+
+
+
+  stateFileExist(urlToFile): boolean {
+    const xhr = new XMLHttpRequest();
+    xhr.open('HEAD', urlToFile, false);
+    xhr.send();
+
+    // @ts-ignore
+    if (xhr.status === '404') {
+      return false;
+    } else {
+      return true;
+    }
   }
 }

@@ -34,18 +34,29 @@
         <div class="grid images_3_of_2">
           <div class="flexslider">
             <ul class="slides">
-              <li data-thumb="assets/images/si1.jpg">
-                <div class="thumb-image">
-                  <img src="assets/images/si1.jpg" data-imagezoom="true" class="img-fluid" alt=""> </div>
-              </li>
-              <li data-thumb="assets/images/si2.jpg">
-                <div class="thumb-image">
-                  <img src="assets/images/si2.jpg" data-imagezoom="true" class="img-fluid" alt=""> </div>
-              </li>
-              <li data-thumb="assets/images/si3.jpg">
-                <div class="thumb-image">
-                  <img src="assets/images/si3.jpg" data-imagezoom="true" class="img-fluid" alt=""> </div>
-              </li>
+<!--              <li data-thumb="{{media?.url}}" *ngFor="let media of carMedia">-->
+<!--                <div class="thumb-image">-->
+<!--                  <img [src]="media?.url" data-imagezoom="true" class="img-fluid" alt="">-->
+<!--                </div>-->
+<!--              </li>-->
+              <carousel overflowCellsLimit="3">
+                <div class="carousel-cell" *ngFor="let media of carMedia">
+<!--                  <img [src]="media?.url">-->
+                  <picture>
+                    <source [srcset]="media?.url" type="image/webp" media="(min-width: 500px)" width="100%">
+                    <source [srcset]="media?.url" type="image/jpeg" media="(min-width: 500px)" width="100%">
+                    <img [srcset]="media?.url" alt="Image Unavailable" width="250px">
+                  </picture>
+                </div>
+              </carousel>
+<!--              <li data-thumb="assets/images/si2.jpg">-->
+<!--                <div class="thumb-image">-->
+<!--                  <img src="assets/images/si2.jpg" data-imagezoom="true" class="img-fluid" alt=""> </div>-->
+<!--              </li>-->
+<!--              <li data-thumb="assets/images/si3.jpg">-->
+<!--                <div class="thumb-image">-->
+<!--                  <img src="assets/images/si3.jpg" data-imagezoom="true" class="img-fluid" alt=""> </div>-->
+<!--              </li>-->
             </ul>
             <div class="clearfix"></div>
           </div>
@@ -53,10 +64,11 @@
       </div>
 
       <div class="col-lg-7 single-right-left simpleCart_shelfItem">
-        <h3 class="mb-3"> {{car?.carName}}  ({{car?.exteriorColor}}, {{car?.model?.wheelType}}) (3 GB RAM)</h3>
+        <h3 class="mb-3"> {{car?.carName}}  (<span class="text-capitalize">{{car?.sellingCondition}}</span>,
+          {{car?.exteriorColor}}, {{car?.model?.wheelType}}) (3 GB RAM)</h3>
         <p class="mb-3">
-          <span class="item_price">$200.00</span>
-          <del class="mx-2 font-weight-light">$280.00</del>
+          <span class="item_price">₦{{car?.marketplacePrice | number}}</span>
+          <del class="mx-2 font-weight-light">₦{{car?.marketplaceOldPrice | number}}</del>
           <label>Free delivery</label>
         </p>
         <div class="single-infoagile">
@@ -77,7 +89,7 @@
 <!--              Shipping Speed to Delivery.-->
 <!--            </li>-->
             <li class="mb-3">
-              EMIs from ${{car?.installment | number}}/month.
+              EMIs from ₦{{car?.installment | number}}/month.
             </li>
             <li class="mb-3">
               Bank OfferExtra 5% off* with Axis Bank Buzz Credit CardT&C
@@ -157,7 +169,7 @@
             <div class="col-sm-7 offer-name">
               <h6>A Bigger Phone</h6>
               <h4 class="mt-2 mb-3">Smart Phones 5</h4>
-              <p>Free shipping order over $100</p>
+              <p>Free shipping order over ₦100</p>
             </div>
             <div class="col-sm-5 offerimg-w3l">
               <img src="assets/images/off2.png" alt="" class="img-fluid">

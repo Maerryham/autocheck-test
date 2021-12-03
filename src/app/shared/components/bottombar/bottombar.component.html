@@ -2,11 +2,10 @@
   <div class="footer-top-first">
     <div class="container py-md-5 py-sm-4 py-3">
       <!-- footer first section -->
-      <h2 class="footer-top-head-w3l font-weight-bold mb-2">Electronics :</h2>
+      <h2 class="footer-top-head-w3l font-weight-bold mb-2">Cars :</h2>
       <p class="footer-main mb-4">
-        If you're considering a new laptop, looking for a powerful new car stereo or shopping for a new HDTV, we make it easy to
-        find exactly what you need at a price you can afford. We offer Every Day Low Prices on TVs, laptops, cell phones, tablets
-        and iPads, video games, desktop computers, cameras and camcorders, audio, video and more.</p>
+        If you're considering a new car, looking for a powerful new Jeep or shopping for Christmas/New Year Drive, we make it easy to
+        find exactly what you need at a price you can afford. We offer Every Day Low Prices on <span *ngFor="let cars of carLists">{{cars.name}}, </span>and more.</p>
       <!-- //footer first section -->
       <!-- footer second section -->
       <div class="row w3l-grids-footer border-top border-bottom py-sm-4 py-3">
@@ -17,7 +16,7 @@
             </div>
             <div class="col-8 text-form-footer">
               <h3>Free Shipping</h3>
-              <p>on orders over $100</p>
+              <p>on orders over ₦100</p>
             </div>
           </div>
         </div>
@@ -216,8 +215,8 @@
 <!-- copyright -->
 <div class="copy-right py-3">
   <div class="container">
-    <p class="text-center text-white">© 2018 Electro Store. All rights reserved | Design by
-      <a href="http://w3layouts.com"> W3layouts.</a>
+    <p class="text-center text-white">© 2021 Cars Store. All rights reserved | Updated by
+      <a href="http://w3layouts.com"> Mariam Lawal</a>
     </p>
   </div>
 </div>

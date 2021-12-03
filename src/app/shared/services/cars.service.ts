@@ -16,18 +16,16 @@ export class CarsService {
     return this.http.get(`${this.url}make?popular=true`).pipe(
       map(
         (response: HttpResponse<any>) => {
-          console.log(response);
           return response;
         }
       )
     );
   }
 
-  getAllCars(): any  {
-    return this.http.get(`${this.url}car/search`).pipe(
+  getAllCars(pageNumber, pageSize): any  {
+    return this.http.get(`${this.url}car/search?pageNumber=${pageNumber}&pageSize=12}`).pipe(
       map(
         (response: HttpResponse<any>) => {
-          console.log(response);
           return response;
         }
       )
@@ -41,5 +39,26 @@ export class CarsService {
         }
       )
     );
+  }
+  getCarMediaById(carId): any{
+    return this.http.get(`${this.url}car_media?carId=${carId}`).pipe(
+      map(
+        (response: HttpResponse<any>) => {
+          return response;
+        }
+      )
+    );
+  }
+  public async readFile(path): Promise<any> {
+    return await new Promise((resolve, reject) => {
+      this.http.get(path).toPromise().then(res => {
+        resolve(
+          console.log(res)
+          // true
+        );
+      }).catch(err => {
+        reject(err);
+      });
+    });
   }
 }

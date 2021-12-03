@@ -41,6 +41,8 @@
               "src/assets/js/minicart.js",
               "src/assets/js/imagezoom.js",
               "src/assets/js/jquery.flexslider.js",
+              "node_modules/angular/angular.js",
+              "node_modules/angular-flexslider/angular-flexslider.js",
               "src/assets/js/scroll.js",
               "src/assets/js/SmoothScroll.min.js",
               "src/assets/js/move-top.js",
