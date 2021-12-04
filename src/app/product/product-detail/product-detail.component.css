@@ -67,3 +67,9 @@ span.item_price{
 .bigImage img{
   min-width: 100%;
 }
+.betterView{
+  overflow: hidden;
+  width: 100%;
+  max-height: 200px;
+  min-height: 200px;
+}

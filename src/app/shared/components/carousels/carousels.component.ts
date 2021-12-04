@@ -8,6 +8,7 @@ import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 })
 export class CarouselsComponent implements OnInit {
 @Input() images;
+@Input() heights;
   constructor(config: NgbCarouselConfig) {
     config.interval = 2000;
     config.wrap = true;
@@ -16,6 +17,11 @@ export class CarouselsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+  // tslint:disable-next-line:typedef
+  public handleMissingImage(event: Event) {
+    (event.target as HTMLImageElement).style.display = 'none';
+    (event.target as HTMLImageElement).parentElement.style.display = 'none';
   }
 
 }

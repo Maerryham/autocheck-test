@@ -651,7 +651,7 @@ h3.tittle-w3l span {
 }
 
 .link-product-add-cart {
-    background: hsla(205, 92%, 41%, 0.72);
+    background: hsla(136, 59% , 51%, 0.72);
     color: #fff;
     display: inline-block;
     height: 37px;
@@ -1486,7 +1486,7 @@ li.subitem1 p {
 /*-- single-page --*/
 
 .single-right-left h3 {
-    font-size: 25px;
+    font-size: 35px;
     color: #000;
 }
 

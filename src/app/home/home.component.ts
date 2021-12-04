@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CarsService} from '../shared/services/cars.service';
 import {ActivatedRoute} from '@angular/router';
 
@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   carBrands;
   carMakeLists;
   carResults;
+  carSlider;
   // cars;
   pagination;
 
@@ -19,7 +20,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCarList();
-    // this.getCars(1, 3);
+    this.getSliderCars();
     this.route.queryParams.subscribe(params => {
       this.getCars(params.pageNumber || '1', params.pageSize || 24);
     });
@@ -29,8 +30,15 @@ export class HomeComponent implements OnInit {
       response => {
         this.carMakeLists = response;
         this.carBrands = this.carMakeLists.makeList;
-        // console.log(this.carLists);
       });
+  }
+  getSliderCars(): any{
+    this.carService.getAllCars(1, 6).subscribe(
+      data => {
+        this.carSlider = data.result;
+        console.log(this.carSlider);
+      }
+    );
   }
   getCars(pageNumber, pageSize): void {
     this.carService.getAllCars(pageNumber, pageSize).subscribe(
@@ -38,10 +46,6 @@ export class HomeComponent implements OnInit {
         this.carResults = response;
         this.carLists = this.carResults.result;
         this.pagination = this.carResults.pagination;
-        console.log(this.carLists);
-      },
-      error => {},
-      () => {
       });
   }
 

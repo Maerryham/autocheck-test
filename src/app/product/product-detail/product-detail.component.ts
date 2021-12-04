@@ -10,9 +10,12 @@ import {StarRatingComponent} from 'ng-starrating';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
-car;
-carMedia;
-carMediaList;
+  car;
+  carMedia;
+  carMediaList;
+  carResults;
+  carSimilar;
+
   constructor(private carService: CarsService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -20,6 +23,7 @@ carMediaList;
       const id = params.get('id');
       this.getCarDetails(id);
       this.getCarMedia(id);
+      this.getCarSimilar();
     });
   }
   getCarDetails(id): void {
@@ -38,11 +42,26 @@ carMediaList;
       }
     );
   }
-  onRate( $event: { oldValue: number, newValue: number, starRating: StarRatingComponent }) {
+  onRate( $event: { oldValue: number, newValue: number, starRating: StarRatingComponent }): void {
     alert(`Old Value:${$event.oldValue},
       New Value: ${$event.newValue},
       Checked Color: ${$event.starRating.checkedcolor},
       Unchecked Color: ${$event.starRating.uncheckedcolor}`);
+  }
+  getCarSimilar(): any{
+    this.carService.getAllCars(1, 3).subscribe(
+      data => {
+        this.carResults = data;
+        this.carSimilar = this.carResults.result;
+      }
+    );
+  }
+
+  // tslint:disable-next-line:typedef
+  public handleMissingImage(event: Event) {
+    (event.target as HTMLImageElement).style.display = 'none';
+    (event.target as HTMLImageElement).parentElement.parentElement.parentElement.parentElement.style.display = 'none';
+    console.log(event.target);
   }
 
 

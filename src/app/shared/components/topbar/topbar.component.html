@@ -171,8 +171,8 @@
       <div class="agileits-navi_search">
         <form action="#" method="post">
           <select id="agileinfo-nav_search" name="agileinfo_search" class="border" required="">
-            <option value="">All Categories</option>
-            <option value="Televisions" *ngFor="let cars of carLists">{{cars.name}}</option>
+            <option value="">Our Brands</option>
+            <option [value]="cars.name" *ngFor="let cars of carLists">{{cars.name}}</option>
           </select>
         </form>
       </div>
@@ -200,14 +200,14 @@
                       <li>
                         <a routerLink="/product">All Cars</a>
                       </li>
-                      <li *ngFor="let cars of splitedLists?.first">
+                      <li *ngFor="let cars of carListArray[0]">
                         <a routerLink="/product">{{cars?.name}}</a>
                       </li>
                     </ul>
                   </div>
                   <div class="col-sm-6 multi-gd-img">
                     <ul class="multi-column-dropdown">
-                      <li *ngFor="let cars of splitedLists?.second">
+                      <li *ngFor="let cars of carListArray[1]">
                         <a routerLink="/product">{{cars?.name}}</a>
                       </li>
 

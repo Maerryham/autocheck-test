@@ -1,10 +1,16 @@
- <div class='col-12'>
     <ngb-carousel>
       <ng-template ngbSlide *ngFor="let image of images">
-        <img [src]="image?.url" alt="Delhi Metro" height="400px" width="100%">
+
+
+<!--        <img [src]="image?.url || image?.imageUrl" alt="Delhi Metro" height="{{heights || '400px'}}" width="100%">-->
+        <img [src]="image?.url || image?.imageUrl" alt="Delhi Metro" height="500px" width="100%">
+<!--        <picture>-->
+<!--          <source [srcset]="image?.url || image?.imageUrl" (error)="handleMissingImage($event)" type="image/webp" media="(min-width: 250px)" width="100%">-->
+<!--          <source [srcset]="image?.url || image?.imageUrl" (error)="handleMissingImage($event)" type="image/jpeg" media="(min-width: 250px)" width="100%">-->
+<!--          <img [srcset]="image?.url || image?.imageUrl"  (error)="handleMissingImage($event)" alt="Image Unavailable" width="250px">-->
+<!--        </picture>-->
         <div class="carousel-caption">
-          <h3 style="color: #EDBF00">{{image?.name}}</h3>
+          <h3 style="color: #EDBF00">{{image?.name ||image?.title}}</h3>
         </div>
       </ng-template>
     </ngb-carousel>
-  </div>

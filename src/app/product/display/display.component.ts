@@ -14,12 +14,10 @@ export class DisplayComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // console.log(this.carLists);
   }
   // tslint:disable-next-line:typedef
   public handleMissingImage(event: Event) {
     (event.target as HTMLImageElement).style.display = 'none';
     (event.target as HTMLImageElement).parentElement.parentElement.parentElement.parentElement.style.display = 'none';
-    console.log(event.target);
   }
 }

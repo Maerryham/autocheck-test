@@ -10,27 +10,28 @@ export class TopbarComponent implements OnInit {
   carLists;
   carMakeLists;
   splitedLists;
+  carListArray = [];
+  second;
   constructor(private carService: CarsService) { }
 
   ngOnInit(): void {
     this.getCars();
+    this.getBrandByPageSize(1, 6);
+    this.getBrandByPageSize(2, 6);
   }
   getCars(): void {
     this.carService.getCarListings().subscribe(
       response => {
         this.carMakeLists = response;
         this.carLists = this.carMakeLists.makeList;
-        this.splitedLists = this.divideArray(this.carLists);
       });
   }
-  divideArray(yourArray): any {
-    // const yourArray = this.carLists;
-    const halfwayThrough = Math.floor(yourArray.length / 2);
-// or instead of floor you can use ceil depending on what side gets the extra data
-
-    const arrayFirstHalf = yourArray.slice(0, halfwayThrough);
-    const arraySecondHalf = yourArray.slice(halfwayThrough, yourArray.length);
-    return {first: arrayFirstHalf, second: arraySecondHalf};
+  getBrandByPageSize(pageNumber, pageSize): any {
+    this.carService.getCarListings(pageNumber, pageSize).subscribe(
+      response => {
+        const carBrands = response;
+        this.carListArray.push(carBrands.makeList);
+        // console.log(this.carListArray);
+      });
   }
-
 }

@@ -52,25 +52,10 @@
       <div class="row footer-info w3-agileits-info">
         <!-- footer categories -->
         <div class="col-md-3 col-sm-6 footer-grids">
-          <h3 class="text-white font-weight-bold mb-3">Categories</h3>
+          <h3 class="text-white font-weight-bold mb-3">Our Popular Brands</h3>
           <ul>
-            <li class="mb-3">
-              <a href="product.html">Mobiles </a>
-            </li>
-            <li class="mb-3">
-              <a href="product.html">Computers</a>
-            </li>
-            <li class="mb-3">
-              <a href="product.html">TV, Audio</a>
-            </li>
-            <li class="mb-3">
-              <a href="product2.html">Smartphones</a>
-            </li>
-            <li class="mb-3">
-              <a href="product.html">Washing Machines</a>
-            </li>
-            <li>
-              <a href="product2.html">Refrigerators</a>
+            <li class="mb-3" *ngFor="let cars of carListArray[0]">
+              <a routerLink="/product">{{cars.name}} </a>
             </li>
           </ul>
         </div>

@@ -12,8 +12,8 @@ export class CarsService {
     this.url = environment.baseApiUrl;
   }
 
-  getCarListings(): any  {
-    return this.http.get(`${this.url}make?popular=true`).pipe(
+  getCarListings(pageNumber= 1, pageSize= 12): any  {
+    return this.http.get(`${this.url}make?popular=true&pageNumber=${pageNumber}&pageSize=${pageSize}`).pipe(
       map(
         (response: HttpResponse<any>) => {
           return response;
