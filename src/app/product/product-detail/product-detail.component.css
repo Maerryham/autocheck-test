@@ -28,3 +28,32 @@
 .result{
   color: #000000;
 }
+.card-title{
+  flex-grow: 1;padding: 10px 20px;vertical-align: middle;line-height: 2;
+  font-size: 15px;
+  /*line-height: 1.9;*/
+  color: #999;
+}
+.card-title a {
+  font-size: 15px;
+  /*line-height: 1.9;*/
+  color: #999;
+}
+.card-header{
+  background: none;
+}
+.grow{
+  flex-grow: 1;
+}
+.customer-rev{
+  padding: 10px 20px;
+  vertical-align: middle;
+  line-height: 2;
+}
+span.item_price{
+  color: #0879c9;
+  font-size: 30px;
+}
+.product-single-w3l p span {
+  margin-right: 10px;
+}
