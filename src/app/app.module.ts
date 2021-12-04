@@ -11,6 +11,7 @@ import {SharedModule} from './shared/shared.module';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import {ProductModule} from './product/product.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
   ],
     imports: [
         BrowserModule, RoutingModule,
-        HttpClientModule, SharedModule, IvyCarouselModule
+        HttpClientModule, SharedModule, IvyCarouselModule, ProductModule
     ],
   providers: [],
   bootstrap: [AppComponent]

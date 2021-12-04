@@ -1,0 +1,30 @@
+.tabs {
+  border: 2px solid #EBEBEB !important;
+}
+.tab-pane {
+  padding: 30px;
+}
+.nav-item {
+  width: 20%;
+}
+.nav-item .nav-link {
+  padding: 30px;
+  color: #0879c9;
+  font-weight: bold;
+  background-color: #FAFAFA;
+
+}
+.nav-item  .nav-link.active {
+  color: #0b0b0b;
+  background-color: #ffffff;
+}
+.nav-tabs .nav-link {
+  border: unset;
+  border-bottom: 2px solid #EBEBEB;
+}
+.title{
+  color: #7B7B7B;
+}
+.result{
+  color: #000000;
+}

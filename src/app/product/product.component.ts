@@ -20,7 +20,7 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
     // this.getCars();
     this.route.queryParams.subscribe(params => {
-      this.getCars(params.pageNumber || '1', params.pageSize || 10);
+      this.getCars(params.pageNumber || '1', params.pageSize || 24);
     });
     this.getCarBrands();
   }
@@ -37,10 +37,20 @@ export class ProductComponent implements OnInit {
         this.carResults = response;
         this.carLists = this.carResults.result;
         this.pagination = this.carResults.pagination;
-        console.log(this.carLists);
-        // this.validCars = this.onlyAvailableImages(this.carLists);
-        // console.log(this.validCars);
+      },
+      error => {},
+      async () => {
+        try{
+          this.validCars = await this.deleteCarUnavailable(this.carLists);
+          console.log(this.validCars);
+        }catch (e) {
+          console.log(e);
+        }
       });
+  }
+  async deleteCarUnavailable(carArray): Promise<any> {
+    carArray.forEach((el, i ) =>  (el.imageUrl === '') ? carArray.splice([i], 1) : carArray );
+    return await carArray;
   }
   public onlyAvailableImages(arrayOfCars): any {
     return arrayOfCars.map(async (carThatExist, i) => {

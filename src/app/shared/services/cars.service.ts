@@ -23,7 +23,7 @@ export class CarsService {
   }
 
   getAllCars(pageNumber, pageSize): any  {
-    return this.http.get(`${this.url}car/search?pageNumber=${pageNumber}&pageSize=12}`).pipe(
+    return this.http.get(`${this.url}car/search?pageNumber=${pageNumber}&pageSize=${pageSize}`).pipe(
       map(
         (response: HttpResponse<any>) => {
           return response;
@@ -53,8 +53,8 @@ export class CarsService {
     return await new Promise((resolve, reject) => {
       this.http.get(path).toPromise().then(res => {
         resolve(
-          console.log(res)
-          // true
+          // console.log(res)
+          true
         );
       }).catch(err => {
         reject(err);
