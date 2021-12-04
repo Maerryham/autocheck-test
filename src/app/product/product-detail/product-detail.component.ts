@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {CarsService} from '../../shared/services/cars.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {flexSlider} from 'angular-flexslider';
+import {StarRatingComponent} from 'ng-starrating';
 
 @Component({
   selector: 'app-product-detail',
@@ -36,6 +37,12 @@ carMediaList;
         console.log( this.carMediaList);
       }
     );
+  }
+  onRate( $event: { oldValue: number, newValue: number, starRating: StarRatingComponent }) {
+    alert(`Old Value:${$event.oldValue},
+      New Value: ${$event.newValue},
+      Checked Color: ${$event.starRating.checkedcolor},
+      Unchecked Color: ${$event.starRating.uncheckedcolor}`);
   }
 
 

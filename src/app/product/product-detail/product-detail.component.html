@@ -31,210 +31,214 @@
     <!-- //tittle heading -->
     <div class="row">
       <div class="col-lg-6 col-md-8 single-right-left ">
-<!--        <carousel overflowCellsLimit="1">-->
-<!--          <div class="carousel-cell" *ngFor="let media of carMedia">-->
-<!--            <picture>-->
-<!--              <source [srcset]="media?.url" type="image/webp" media="(min-width: 500px)" width="100%">-->
-<!--              <source [srcset]="media?.url" type="image/jpeg" media="(min-width: 500px)" width="100%">-->
-<!--              <img [srcset]="media?.url" alt="Image Unavailable" width="450px">-->
-<!--            </picture>-->
-<!--          </div>-->
-<!--        </carousel>-->
         <app-carousels [images]="carMedia"></app-carousels>
-
-<!--        <div class="grid images_3_of_2">-->
-<!--          <div class="flexslider">-->
-<!--            <ul class="slides">-->
-
-<!--            </ul>-->
-<!--            <div class="clearfix"></div>-->
-<!--          </div>-->
-<!--        </div>-->
       </div>
 
       <div class="col-lg-6 single-right-left simpleCart_shelfItem">
-        <h3 class="mb-2"> {{car?.carName}}</h3>
-        <p class="mb-2">
-          <span class="item_price">₦{{car?.marketplacePrice | number}}</span>
-          <del class="mx-2 font-weight-light">₦{{car?.marketplaceOldPrice | number}}</del>
-        </p>
 
-        <div class="product-single-w3l" style="border-top: none">
-          <p class="my-3 text-capitalize">
-            <span>
-              <i class="fa fa-car"></i> {{car?.sellingCondition}}
-            </span>
-            <span>
-              <i class="fa fa-map-marker-alt"></i> {{car?.city}}, {{car?.state}}, {{car?.country}}
-            </span>
-            <span>
-              <i class="fa fa-weight"></i> {{car?.mileage}} {{car?.mileageUnit}}
-            </span>
-          <ul>
-          </ul>
-        </div>
-        <div class="occasion-cart">
-          <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-            <form action="#" method="post">
-              <fieldset>
-                <input type="hidden" name="cmd" value="_cart" />
-                <input type="hidden" name="add" value="1" />
-                <input type="hidden" name="business" value=" " />
-                <input type="hidden" name="item_name" value="Samsung Galaxy J7 Prime" />
-                <input type="hidden" name="amount" value="200.00" />
-                <input type="hidden" name="discount_amount" value="1.00" />
-                <input type="hidden" name="currency_code" value="USD" />
-                <input type="hidden" name="return" value=" " />
-                <input type="hidden" name="cancel_return" value=" " />
-                <input type="submit" name="submit" value="Add to cart" class="button" />
-              </fieldset>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-12">
-        <div class="tabs" style="border: 2px solid #EBEBEB !important;">
-          <ul class="nav nav-tabs">
-            <li class="nav-item text-center">
-              <a class="nav-link active" href="#popular" data-toggle="tab">Vehicle Description</a>
-            </li>
-            <li class="nav-item text-center">
-              <a class="nav-link" href="#specs" data-toggle="tab">Features/Specs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#reports" data-toggle="tab">Inspection Report</a>
-            </li>
-            <li class="nav-item text-center">
-              <a class="nav-link" href="#pros" data-toggle="tab">Inspector's Profile</a>
-            </li>
-            <li class="nav-item text-center">
-              <a class="nav-link" href="#comment" data-toggle="tab">Comments (7)</a>
-            </li>
-          </ul>
-          <div class="tab-content">
-            <div id="popular" class="tab-pane active">
-              <div style="border: 2px solid #EBEBEB" class="p-3 ">
-                <div class="row">
-                  <div class="p-3 col-lg-4 text-center">
-                    <span class="title ">Make </span> <span class="result">{{car?.model?.make?.name}} </span>
-                  </div>
-                  <div class="p-3 col-lg-4 text-center">
-                    <span class="title text-center">WheelType </span> <span class="result">{{car?.model?.wheelType}}</span>
-                  </div>
-                  <div class="p-3 col-lg-4 text-center">
-                    <span class="title text-center"><i class="fa fa-map-marker-alt"></i> Location </span> <span class="result">{{car?.city}}, {{car?.state}}, {{car?.country}}</span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="p-3 col-lg-4 text-center">
-                    <span class="title">Color Name:</span> <span class="result">ESTORIL Green MET</span>
-                  </div>
-                  <div class="p-3 col-lg-4 text-center">
-                    <span class="title">Exterior Color:</span> <span class="result">ESTORIL Green MET</span>
-                  </div>
-                  <div class="p-3 col-lg-4 text-center">
-                    <span class="title">Interior Color:</span> <span class="result">ESTORIL Green MET</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="specs" class="tab-pane">
-              <div>
-                <div class="d-flex border-bottom p-3">
-                  <p class="grow">Engine Type</p><p class="pull-right">{{car?.engineType}}</p>
-                </div>
-                <div class="d-flex border-bottom p-3">
-                  <p class="grow">Transmission</p><p class="pull-right text-capitalize">{{car?.transmission}}</p>
-                </div>
-                <div class="d-flex border-bottom p-3">
-                  <p class="grow">Interior color</p><p class="pull-right">{{car?.interiorColor}}</p>
-                </div>
-                <div class="d-flex border-bottom p-3">
-                  <p class="grow">Exterior color</p><p class="pull-right">{{car?.exteriorColor}}</p>
-                </div>
-                <div class="d-flex border-bottom p-3">
-                  <p class="grow">VIN</p><p class="pull-right">{{car?.vin}}</p>
-                </div>
-                <div class="d-flex border-bottom p-3">
-                  <p class="grow">Mileage</p><p class="pull-right">{{car?.mileage}} {{car?.mileageUnit}}</p>
-                </div>
-              </div>
-            </div>
-            <div id="reports" class="tab-pane">
+                  <p class="d-flex">
+                    <star-rating [value]="car?.gradeScore" totalstars="5" checkedcolor="#EDBF00" uncheckedcolor="gray" size="20px" readonly="false" (rate)="onRate($event)"></star-rating>
+                    <span class="ml-3 p-1">({{car?.gradeScore}} star)</span>
+                  </p>
+                  <h3 class="mb-2"> {{car?.carName}}</h3>
+                  <p class="mb-2">
+                    <span class="item_price">₦{{car?.marketplacePrice | number}}</span>
+                    <del class="mx-2 font-weight-light">₦{{car?.marketplaceOldPrice | number}}</del>
+                  </p>
 
-              <div class="accordion" id="accordion">
-                <div class="card card-default" *ngFor="let item of car?.damageMedia, let i = index">
-                  <div class="card-header d-flex p-0">
-                    <h6 class="card-title m-0">
-                      <a class="accordion-toggle collapsed d-block" data-toggle="collapse" data-parent="#accordion" [href]="'#collapse1One'+i" aria-expanded="false">
-                        {{item?.name}}
-                      </a>
-                    </h6>
-                    <div class="customer-rev left-side">
-                      <ul *ngIf="item.comment === 'Ok' || 'Good'">
-                        <li>
-                          <a href="#">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                          </a>
-                        </li>
-                      </ul>
+                  <div class="product-single-w3l" style="border-top: none">
+                    <p class="my-3 text-capitalize">
+                      <span>
+                        <i class="fa fa-car"></i> {{car?.sellingCondition}}
+                      </span>
+                      <span>
+                        <i class="fa fa-map-marker-alt"></i> {{car?.city}}, {{car?.state}}, {{car?.country}}
+                      </span>
+                      <span>
+                        <i class="fa fa-weight"></i> {{car?.mileage | number}} {{car?.mileageUnit}}
+                      </span>
+                    <ul>
+                    </ul>
+                  </div>
+                  <div class="occasion-cart">
+                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                      <form action="#" method="post">
+                        <fieldset>
+                          <input type="hidden" name="cmd" value="_cart" />
+                          <input type="hidden" name="add" value="1" />
+                          <input type="hidden" name="business" value=" " />
+                          <input type="hidden" name="item_name" value="Samsung Galaxy J7 Prime" />
+                          <input type="hidden" name="amount" value="200.00" />
+                          <input type="hidden" name="discount_amount" value="1.00" />
+                          <input type="hidden" name="currency_code" value="USD" />
+                          <input type="hidden" name="return" value=" " />
+                          <input type="hidden" name="cancel_return" value=" " />
+                          <input type="submit" name="submit" value="Add to cart" class="button" />
+                        </fieldset>
+                      </form>
                     </div>
                   </div>
-                  <div [id]="'collapse1One'+i" class="collapse" style="">
-                    <div class="card-body">
-                      <div class="d-flex border-bottom p-3" *ngFor="let inspectionItems of car?.damageMedia[i].inspectionItems">
-                        <p class="grow text-capitalize">{{inspectionItems?.name}}</p><p class="pull-right text-dark text-capitalize font-weight-bold">{{inspectionItems?.response}}</p>
+                </div>
+                <div class="col-lg-12">
+                  <div class="tabs" style="border: 2px solid #EBEBEB !important;">
+                    <ul class="nav nav-tabs">
+                      <li class="nav-item text-center">
+                        <a class="nav-link active" href="#popular" data-toggle="tab">Vehicle Description</a>
+                      </li>
+                      <li class="nav-item text-center">
+                        <a class="nav-link" href="#specs" data-toggle="tab">Features/Specs</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#reports" data-toggle="tab">Inspection Report</a>
+                      </li>
+                      <li class="nav-item text-center">
+                        <a class="nav-link" href="#pros" data-toggle="tab">Inspector's Profile</a>
+                      </li>
+                      <li class="nav-item text-center">
+                        <a class="nav-link" href="#comment" data-toggle="tab">Loan Details</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content">
+                      <div id="popular" class="tab-pane active">
+                        <div style="border: 2px solid #EBEBEB" class="p-3 ">
+                          <div class="row">
+                            <div class="p-3 col-lg-4 text-center">
+                              <span class="title ">Make: </span> <span class="result">{{car?.model?.make?.name}} </span>
+                            </div>
+                            <div class="p-3 col-lg-4 text-center">
+                              <span class="title text-center">WheelType: </span> <span class="result">{{car?.model?.wheelType}}</span>
+                            </div>
+                            <div class="p-3 col-lg-4 text-center">
+                              <span class="title text-center"><i class="fa fa-gas-pump"></i> FuelType: </span> <span class="result text-capitalize">{{car?.fuelType}}</span>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="p-3 col-lg-4 text-center">
+                              <span class="title">Engine Type: </span> <span class="result">{{car?.engineType}}</span>
+                            </div>
+                            <div class="p-3 col-lg-4 text-center">
+                              <span class="title">GradeScore: </span> <span class="result">{{car?.gradeScore}}</span>
+                            </div>
+                            <div class="p-3 col-lg-4 text-center">
+                              <span class="title">Year: </span> <span class="result">{{car?.year}}</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="bigImage">
+                          <img [src]="car?.imageUrl" class="img-fluid"/>
+                        </div>
+                      </div>
+                      <div id="specs" class="tab-pane">
+                        <div>
+                          <div class="d-flex border-bottom p-3">
+                            <p class="grow">Engine Type</p><p class="pull-right">{{car?.engineType}}</p>
+                          </div>
+                          <div class="d-flex border-bottom p-3">
+                            <p class="grow">Transmission</p><p class="pull-right text-capitalize">{{car?.transmission}}</p>
+                          </div>
+                          <div class="d-flex border-bottom p-3">
+                            <p class="grow">GradeScore</p><p class="pull-right text-capitalize">{{car?.gradeScore}}</p>
+                          </div>
+                          <div class="d-flex border-bottom p-3">
+                            <p class="grow">Interior color</p><p class="pull-right">{{car?.interiorColor}}</p>
+                          </div>
+                          <div class="d-flex border-bottom p-3">
+                            <p class="grow">Exterior color</p><p class="pull-right">{{car?.exteriorColor}}</p>
+                          </div>
+                          <div class="d-flex border-bottom p-3">
+                            <p class="grow">VIN</p><p class="pull-right">{{car?.vin}}</p>
+                          </div>
+                          <div class="d-flex border-bottom p-3">
+                            <p class="grow">Mileage</p><p class="pull-right">{{car?.mileage | number}} {{car?.mileageUnit}}</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="reports" class="tab-pane">
+
+                        <div class="accordion" id="accordion">
+                          <div class="card card-default" *ngFor="let item of car?.damageMedia, let i = index">
+                            <div class="card-header d-flex p-0">
+                              <h6 class="card-title m-0">
+                                <a class="accordion-toggle collapsed d-block" data-toggle="collapse" data-parent="#accordion" [href]="'#collapse1One'+i" aria-expanded="false">
+                                  {{item?.name}}
+                                </a>
+                              </h6>
+                              <div class="customer-rev left-side">
+                                <ul *ngIf="item.comment === 'Ok' || 'Good'">
+                                  <li>
+                                    <a href="#">
+                                      <i class="fa fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star" aria-hidden="true"></i>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div [id]="'collapse1One'+i" class="collapse" style="">
+                              <div class="card-body">
+                                <div class="d-flex border-bottom p-3" *ngFor="let inspectionItems of car?.damageMedia[i].inspectionItems">
+                                  <p class="grow text-capitalize">{{inspectionItems?.name}}</p><p class="pull-right text-dark text-capitalize font-weight-bold">{{inspectionItems?.response}}</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div id="pros" class="tab-pane">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <div class="" *ngIf="car?.profileImageUrl === 'string' || !car?.profileImageUrl">
+                              <i class="fa fa-user fa-10x text-dark"></i>
+                            </div>
+                            <div class="img-thumbnail" *ngIf="car?.profileImageUrl !== 'string' || car?.profileImageUrl !== ''">
+                              <img [src]="car?.profileImageUrl" class="img-fluid"/>
+                            </div>
+                          </div>
+                          <div class="col-md-9">
+                            <div class="d-flex border-bottom p-3">
+                              <p class="grow text-dark font-weight-bold">Inspector FullName</p><p class="pull-right text-capitalize">{{car?.inspectorDetails?.inspectorFullName}}</p>
+                            </div>
+                            <div class="d-flex border-bottom p-3">
+                              <p class="grow text-dark font-weight-bold">Total Inspection</p><p class="pull-right">{{car?.inspectorDetails?.totalInspection}}</p>
+                            </div>
+                          </div>
+                          <div class="col-md-12 d-flex">
+                            <div class="img-thumbnail" *ngFor="let make of car?.inspectorDetails?.inspectedMakes">
+                              <img [src]="make?.imageUrl" class="img-fluid" width="50px"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="comment" class="tab-pane">
+                        <div class="d-flex border-bottom p-3">
+                          <p class="grow">Installment</p><p class="pull-right">₦ {{car?.installment | number}}</p>
+                        </div>
+                        <div class="d-flex border-bottom p-3">
+                          <p class="grow">Loan Value</p><p class="pull-right">₦ {{car?.loanValue | number}}</p>
+                        </div>
+                        <div class="d-flex border-bottom p-3">
+                          <p class="grow">Tenure</p><p class="pull-right">{{car?.loanValue / car?.installment}}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-
-            </div>
-            <div id="pros" class="tab-pane">
-              <div class="row">
-                <div class="col-md-3">
-                  <div class="" *ngIf="car?.profileImageUrl === 'string' || !car?.profileImageUrl">
-                    <i class="fa fa-user fa-10x text-dark"></i>
-                  </div>
-                  <div class="img-thumbnail" *ngIf="car?.profileImageUrl !== 'string' || car?.profileImageUrl !== ''">
-                    <img [src]="car?.profileImageUrl" class="img-fluid"/>
-                  </div>
-                </div>
-                <div class="col-md-9">
-                  <div class="d-flex border-bottom p-3">
-                    <p class="grow">InspectorFullName</p><p class="pull-right text-capitalize">{{car?.inspectorDetails?.inspectorFullName}}</p>
-                  </div>
-                  <div class="d-flex border-bottom p-3">
-                    <p class="grow">TotalInspection</p><p class="pull-right">{{car?.inspectorDetails?.totalInspection}}</p>
-                  </div>
-                </div>
-                <div class="col-md-12 d-flex">
-                  <div class="img-thumbnail" *ngFor="let make of car?.inspectorDetails?.inspectedMakes">
-                    <img [src]="make?.imageUrl" class="img-fluid" width="50px"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="comment" class="tab-pane">
-              <p>Recent</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- //Single Page -->
+          <!-- //Single Page -->
 
 <!-- middle section -->
-<div class="join-w3l1 py-sm-5 py-4">
+<!--<div class="join-w3l1 py-sm-5 py-4">-->
   <div class="container py-xl-4 py-lg-2">
+    <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
+      <span>S</span>imilar
+      <span>C</span>ars
+    </h3>
     <div class="row">
       <div class="col-lg-6">
         <div class="join-agile text-left p-4">
@@ -266,6 +270,6 @@
       </div>
     </div>
   </div>
-</div>
+<!--</div>-->
 <!-- middle section -->
 <app-bottombar></app-bottombar>

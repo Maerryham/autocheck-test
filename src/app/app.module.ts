@@ -13,6 +13,7 @@ import { ProductDetailComponent } from './product/product-detail/product-detail.
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import {ProductModule} from './product/product.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {RatingModule} from 'ng-starrating';
 
 @NgModule({
   declarations: [
@@ -21,10 +22,10 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     ProductComponent,
     ProductDetailComponent
   ],
-    imports: [
-        BrowserModule, RoutingModule,
-        HttpClientModule, SharedModule, IvyCarouselModule, ProductModule, BrowserModule, NgbModule
-    ],
+  imports: [
+    BrowserModule, RoutingModule,
+    HttpClientModule, SharedModule, IvyCarouselModule, ProductModule, BrowserModule, NgbModule, RatingModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

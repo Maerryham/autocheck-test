@@ -1,9 +1,9 @@
  <div class='col-12'>
     <ngb-carousel>
       <ng-template ngbSlide *ngFor="let image of images">
-        <img [src]="image?.url" alt="Delhi Metro">
+        <img [src]="image?.url" alt="Delhi Metro" height="400px" width="100%">
         <div class="carousel-caption">
-          <h3 style="color: yellow">{{image?.name}}</h3>
+          <h3 style="color: #EDBF00">{{image?.name}}</h3>
         </div>
       </ng-template>
     </ngb-carousel>

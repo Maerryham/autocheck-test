@@ -80,7 +80,7 @@ label {
 /*-- top-header --*/
 
 .main-top-w3l {
-    background: #0879c9;
+    background: #30BC55;
 }
 
 .header-most-top p {
@@ -109,7 +109,7 @@ label {
 
 .modal-title {
     font-size: 30px;
-    color: #0879c9;
+    color: #30BC55;
 }
 
 .modal-content {
@@ -123,7 +123,7 @@ label.col-form-label {
 }
 
 p.dont-do a {
-    color: #F45C5D;
+    color: #30BC55;
 }
 
 .modal-footer .btn-primary,
@@ -156,7 +156,7 @@ p.dont-do a {
     cursor: pointer;
     letter-spacing: 1px;
     padding: 10px 0;
-    background: #0879c9;
+    background: #30BC55;
     color: #fff;
     margin: 2vw 0 1.5vw;
     -webkit-transition: 0.5s all;
@@ -207,7 +207,7 @@ input[type="submit"] {
 
 .agileits_search button {
     border-radius: 0;
-    background: #F45C5D;
+    background: #30BC55;
     color: #fff;
     width: 20%;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.22);
@@ -219,7 +219,7 @@ input[type="submit"] {
 /*-- logo --*/
 
 .logo_agile h1 a {
-    color: #F45C5D;
+    color: #30BC55;
     font-size: 38px;
     text-decoration: none;
     letter-spacing: 1px;
@@ -272,7 +272,7 @@ button.w3view-cart {
 .navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
-    color: #F45C5D;
+    color: #30BC55;
 }
 
 /*-- navigation-dropdown --*/
@@ -294,13 +294,13 @@ ul.multi-column-dropdown li a {
 }
 
 ul.multi-column-dropdown li a:hover {
-    color: #F45C5D;
+    color: #30BC55;
 }
 
 .dropdown-menu>.active>a,
 .dropdown-menu>.active>a:hover,
 .dropdown-menu>.active>a:focus {
-    background-color: #F45C5D;
+    background-color: #30BC55;
 }
 
 .dropdown-item {
@@ -309,7 +309,7 @@ ul.multi-column-dropdown li a:hover {
 
 .dropdown-item.active,
 .dropdown-item:active {
-    background-color: #0879c9;
+    background-color: #30BC55;
 }
 
 /*-- //navigation-dropdown --*/
@@ -387,7 +387,7 @@ ul.multi-column-dropdown li a:hover {
 .carousel-caption h2 span,
 .carousel-caption h3 span {
     font-weight: 800;
-    color: #F45C5D;
+    color: #30BC55;
 }
 
 .carousel-caption p {
@@ -417,7 +417,7 @@ ul.multi-column-dropdown li a:hover {
 
 .button2 {
     display: inline-block;
-    background: #0879c9;
+    background: #30BC55;
     border-radius: 4px;
     color: #fff;
     letter-spacing: 2px;
@@ -426,7 +426,7 @@ ul.multi-column-dropdown li a:hover {
 
 .button2:hover,
 .button2:focus {
-    background: #F45C5D;
+    background: #30BC55;
     color: #fff;
 }
 
@@ -446,7 +446,7 @@ h3.tittle-w3l {
 }
 
 h3.tittle-w3l span {
-    color: #0879c9;
+    color: #30BC55;
     font-size: 50px;
     letter-spacing: 0;
 }
@@ -467,7 +467,7 @@ h3.tittle-w3l span {
 .snipcart-details input.button {
     font-size: 13px;
     color: #fff;
-    background: #0879c9;
+    background: #30BC55;
     text-decoration: none;
     border: none;
     border-radius: 0;
@@ -537,7 +537,7 @@ h3.tittle-w3l span {
 
 #PPminicarts .minicarts-submit {
     color: #fff !important;
-    background: #0879c9 !important;
+    background: #30BC55 !important;
     padding: 0 10px !important;
     font-size: 15px;
     letter-spacing: 1px;
@@ -549,7 +549,7 @@ h3.tittle-w3l span {
     transition: 0.5s all;
     bottom: -25px !important;
     right: 0 !important;
-    border: 1px solid #0879c9 !important;
+    border: 1px solid #30BC55 !important;
     border-radius: 0px !important;
     text-shadow: none !important;
 }
@@ -832,7 +832,7 @@ h3.tittle-w3l span {
 }
 
 .search-hotel form input[type="submit"] {
-    background: url(../images/search.png) no-repeat 13px 11px #0879c9;
+    background: url(../images/search.png) no-repeat 13px 11px #30BC55;
     width: 44px;
     height: 39px;
     border: none;
@@ -850,7 +850,7 @@ h3.tittle-w3l span {
 }
 
 h3.agileits-sear-head {
-    color: #F45C5D;
+    color: #30BC55;
     font-size: 21px;
 }
 
@@ -917,7 +917,7 @@ input.checked {
 /*-- best seller (scroll) --*/
 
 .f-grid a {
-    color: #0879c9;
+    color: #30BC55;
     font-size: 15px;
 }
 
@@ -973,7 +973,7 @@ span.item_price {
 }
 
 .product-sec1.product-sec2 {
-    background: #F45C5D;
+    background: #30BC55;
     position: relative;
 }
 
@@ -998,7 +998,7 @@ p.w3l-nut-middle {
 }
 
 .agile_inner_drop_nav_info.p-4 h5 {
-    color: #0879c9;
+    color: #30BC55;
     letter-spacing: 1px;
 }
 
@@ -1074,7 +1074,7 @@ h2.footer-top-head-w3l {
 .icon-fot i {
     font-size: 41px;
     line-height: 1.4;
-    color: #0879c9;
+    color: #30BC55;
 }
 
 .text-form-footer {
@@ -1110,7 +1110,7 @@ h2.footer-top-head-w3l {
 }
 
 .footer-grids ul li a:hover {
-    color: #F45C5D;
+    color: #30BC55;
     -webkit-transition: .5s all;
     -moz-transition: .5s all;
     -o-transition: .5s all;
@@ -1119,7 +1119,7 @@ h2.footer-top-head-w3l {
 }
 
 .footer-grids ul li i {
-    color: #f45c5d;
+    color: #30BC55;
     padding-right: 10px;
 }
 
@@ -1217,7 +1217,7 @@ h2.footer-top-head-w3l {
     padding: 10px;
     letter-spacing: 1px;
     width: 18%;
-    background: #f45c5d;
+    background: #30BC55;
     border: none;
 	cursor: pointer;
     -webkit-transition: 0.5s all;
@@ -1228,7 +1228,7 @@ h2.footer-top-head-w3l {
 }
 
 .w3l-agileits input[type="submit"]:hover {
-    background: #0879c9;
+    background: #30BC55;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
@@ -1267,7 +1267,7 @@ h2.footer-top-head-w3l {
 /*-- copyright --*/
 
 .copy-right {
-    background: #0879c9;
+    background: #30BC55;
 }
 
 .copy-right p {
@@ -1349,7 +1349,7 @@ ul.w3_short li {
 }
 
 ul.w3_short li a {
-    color: #F45C5D;
+    color: #30BC55;
     text-decoration: none;
 }
 
@@ -1373,7 +1373,7 @@ ul.w3_short {
 /*-- faq-page --*/
 
 h3.w3-head {
-    color: #f45c5d;
+    color: #30BC55;
     font-size: 28px;
     letter-spacing: 1px;
 }
@@ -1410,7 +1410,7 @@ li.subitem1 p {
     width: 90%;
     border: none;
     padding: 16px;
-    border-bottom: solid 1px #0879c9;
+    border-bottom: solid 1px #30BC55;
     height: 150px;
     outline: none;
     resize: none;
@@ -1419,7 +1419,7 @@ li.subitem1 p {
 .wthree-help form input[type="submit"] {
     font-size: 16px;
     color: #fff;
-    background: #F45C5D;
+    background: #30BC55;
     outline: none;
     border: none;
     cursor: pointer;
@@ -1432,7 +1432,7 @@ li.subitem1 p {
 }
 
 .wthree-help form input[type="submit"]:hover {
-    background: #0879c9;
+    background: #30BC55;
     -webkit-transform: translateY(8px);
     -ms-transform: translateY(8px);
     -o-transform: translateY(8px);
@@ -1448,7 +1448,7 @@ li.subitem1 p {
 .wthree-help a {
     color: #fff;
     padding: 10px 20px;
-    background: #0879c9;
+    background: #30BC55;
 }
 
 /*-- //help page --*/
@@ -1505,11 +1505,11 @@ li.subitem1 p {
 }
 
 .product-single-w3l {
-    border-top: 1px solid #0879c9;
+    border-top: 1px solid #30BC55;
 }
 
 .product-single-w3l p i {
-    color: #0879c9;
+    color: #30BC55;
     font-size: 24px;
 }
 
@@ -1534,7 +1534,7 @@ li.subitem1 p {
 /*-- checkout --*/
 
 .checkout-right h4 {
-    color: #F45C5D;
+    color: #30BC55;
     font-size: 26px;
     letter-spacing: 1px;
 }
@@ -1664,7 +1664,7 @@ td.invert-image a img {
 /*-- checkout form --*/
 
 .address_form_agile h4 {
-    color: #0879c9;
+    color: #30BC55;
     font-size: 24px;
     letter-spacing: 1px;
 }
@@ -1678,7 +1678,7 @@ td.invert-image a img {
     margin-bottom: 20px;
     outline: none;
     border: none;
-    border-bottom: 1px solid #F45C5D;
+    border-bottom: 1px solid #30BC55;
     -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.31);
     -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.31);
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.31);
@@ -1687,7 +1687,7 @@ td.invert-image a img {
 button.submit.check_out {
     padding: 12px 25px;
     letter-spacing: 1px;
-    background: #0879c9;
+    background: #30BC55;
     font-size: 16px;
     color: #fff;
     border: none;
@@ -1700,7 +1700,7 @@ button.submit.check_out {
 }
 
 button.submit.check_out:hover {
-    background: #F45C5D;
+    background: #30BC55;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -1727,7 +1727,7 @@ button.submit.check_out:hover {
 }
 
 .checkout-right-basket a:hover {
-    background: #F45C5D;
+    background: #30BC55;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -1737,7 +1737,7 @@ button.submit.check_out:hover {
 
 .checkout-right-basket a span {
     margin-left: 7px;
-    color: #0879c9;
+    color: #30BC55;
     font-size: 20px;
 }
 
@@ -1771,10 +1771,10 @@ button.submit.check_out:hover {
     position: relative;
     padding: 6px 50px 11px;
     letter-spacing: 3px;
-    background: #0879c9;
+    background: #30BC55;
     font-size: 1.5em;
     color: #fff;
-    border: 1px solid #0879c9;
+    border: 1px solid #30BC55;
     outline: none;
     text-transform: uppercase;
     cursor: pointer;
@@ -1866,7 +1866,7 @@ a.btn.btn-primary {
 }
 
 .vertical_post h5 {
-    color: #F45C5D;
+    color: #30BC55;
     font-size: 20px;
     margin: 0 0 18px 0;
     letter-spacing: 1px;
@@ -1945,7 +1945,7 @@ select.form-control.option-w3ls {
 
 .vertical_post form input[type="submit"],
 .number-paymk input[type="submit"] {
-    background: #0879c9;
+    background: #30BC55;
     color: #FFFFFF;
     text-align: center;
     padding: 11px 19px;
@@ -1965,7 +1965,7 @@ select.form-control.option-w3ls {
 
 .vertical_post form input[type="submit"]:hover,
 .number-paymk input[type="submit"]:hover {
-    background: #F45C5D;
+    background: #30BC55;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -2007,7 +2007,7 @@ h3.title:before {
 }
 
 .welcome-left h3 {
-    color: #F45C5D;
+    color: #30BC55;
     font-size: 36px;
     letter-spacing: 1px;
 }
@@ -2021,7 +2021,7 @@ h3.title:before {
 
 .readmore-w3-agileits a {
     border: 1px solid #fff;
-    background: #0879c9;
+    background: #30BC55;
     display: inline-block;
     text-decoration: none;
     color: #fff;
@@ -2078,7 +2078,7 @@ div#testimonials h4.m-title {
     bottom: -11.5%;
     border-left: 14px solid transparent;
     border-right: 14px solid transparent;
-    border-bottom: 18px solid #f45c5d;
+    border-bottom: 18px solid #30BC55;
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
@@ -2113,7 +2113,7 @@ div#testimonials h4.m-title {
 
 .contact-grid1 h4 {
     font-size: 24px;
-    color: #0879c9;
+    color: #30BC55;
     letter-spacing: 1px;
 }
 
@@ -2162,7 +2162,7 @@ div#testimonials h4.m-title {
     outline: none;
     padding: 12px 0;
     border: none;
-    background: #0879c9;
+    background: #30BC55;
     font-size: 1em;
     color: #fff;
     width: 100%;
@@ -2391,7 +2391,7 @@ div#testimonials h4.m-title {
         font-size: 15px;
     }
     .navbar-light .navbar-toggler {
-        border-color: #0879c9;
+        border-color: #30BC55;
         border-radius: 0;
     }
     .carousel-caption p {
