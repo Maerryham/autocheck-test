@@ -64,5 +64,9 @@ export class ProductDetailComponent implements OnInit {
     console.log(event.target);
   }
 
+  round(num): number {
+    return Math.round(num * 100) / 100;
+  }
+
 
 }

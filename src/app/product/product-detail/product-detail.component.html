@@ -38,7 +38,7 @@
 
                   <p class="d-flex">
                     <star-rating [value]="car?.gradeScore" totalstars="5" checkedcolor="#EDBF00" uncheckedcolor="gray" size="20px" readonly="false" (rate)="onRate($event)"></star-rating>
-                    <span class="ml-3 p-1">({{car?.gradeScore}} star)</span>
+                    <span class="ml-3 p-1">({{round(car?.gradeScore)}} star)</span>
                   </p>
                   <h3 class="mb-2"> {{car?.carName}}</h3>
                   <p class="mb-2">
@@ -79,7 +79,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-12 mt-lg-5">
+                <div class="col-lg-12 mt-5">
                   <div class="tabs" style="border: 2px solid #EBEBEB !important;">
                     <ul class="nav nav-tabs">
                       <li class="nav-item text-center">

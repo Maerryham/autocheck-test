@@ -36,6 +36,8 @@
   font-size: 15px;
   /*line-height: 1.9;*/
   color: #31355b;
+  font-family: Open Sans,sans-serif;
+  font-weight: 700;
 }
 .card-title a {
   font-size: 15px;
