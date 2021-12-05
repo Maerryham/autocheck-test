@@ -11,7 +11,7 @@
 <!--        </picture>-->
         <div class="carousel-caption">
           <h3 style="color: #EDBF00">{{image?.name ||image?.title}}</h3>
-          <a class="btn btn-success mx-5" [routerLink]="['/product',image?.id]" *ngIf="link">Shop Now</a>
+          <a class="btn btn-success px-5" [routerLink]="['/product',image?.id]" *ngIf="link">Shop Now</a>
         </div>
       </ng-template>
     </ngb-carousel>
