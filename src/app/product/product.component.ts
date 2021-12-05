@@ -42,7 +42,6 @@ export class ProductComponent implements OnInit {
       async () => {
         try{
           this.validCars = await this.deleteCarUnavailable(this.carLists);
-          console.log(this.validCars);
         }catch (e) {
           console.log(e);
         }

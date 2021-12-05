@@ -49,7 +49,7 @@ export class ProductDetailComponent implements OnInit {
       Unchecked Color: ${$event.starRating.uncheckedcolor}`);
   }
   getCarSimilar(): any{
-    this.carService.getAllCars(1, 3).subscribe(
+    this.carService.getAllCars(Math.floor(Math.random() * 100), 3).subscribe(
       data => {
         this.carResults = data;
         this.carSimilar = this.carResults.result;

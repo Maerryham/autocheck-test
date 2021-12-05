@@ -8,14 +8,16 @@ import {Component, Input, OnInit} from '@angular/core';
 export class PaginationComponent implements OnInit {
   @Input() pagination;
   @Input() link;
-  constructor() { }
+  // lastPageNo;
+  constructor() {
+  }
 
   // lastPage;
   ngOnInit(): void {
+    // this.lastPage();
   }
-  lastPage() {
-    // console.log(this.pagination.total / this.pagination.pageSize);
-    // return this.pagination.total / this.pagination.pageSize;
-  }
+  // lastPage(): void {
+  //   this.lastPageNo = this.pagination.total / this.pagination.pageSize;
+  // }
 
 }
