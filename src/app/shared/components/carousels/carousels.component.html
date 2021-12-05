@@ -3,7 +3,7 @@
 
 
 <!--        <img [src]="image?.url || image?.imageUrl" alt="Delhi Metro" height="{{heights || '400px'}}" width="100%">-->
-        <img [src]="image?.url || image?.imageUrl" alt="Delhi Metro" height="500px" width="100%">
+        <img [src]="image?.url || image?.imageUrl" alt="Delhi Metro" [height]="heights" width="100%">
 <!--        <picture>-->
 <!--          <source [srcset]="image?.url || image?.imageUrl" (error)="handleMissingImage($event)" type="image/webp" media="(min-width: 250px)" width="100%">-->
 <!--          <source [srcset]="image?.url || image?.imageUrl" (error)="handleMissingImage($event)" type="image/jpeg" media="(min-width: 250px)" width="100%">-->
