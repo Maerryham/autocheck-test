@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
       });
   }
   getSliderCars(): any{
-    this.carService.getAllCars(1, 6).subscribe(
+    this.carService.getAllCars(Math.floor(Math.random() * 100), 6).subscribe(
       data => {
         this.carSlider = data.result;
         console.log(this.carSlider);

@@ -9,6 +9,7 @@ import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 export class CarouselsComponent implements OnInit {
 @Input() images;
 @Input() heights;
+@Input() link;
   constructor(config: NgbCarouselConfig) {
     config.interval = 2000;
     config.wrap = true;
